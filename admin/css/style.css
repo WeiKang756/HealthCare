@@ -1,0 +1,34 @@
+.logo{
+  width: 180px;
+  height: 160px;
+  margin-top:-20px;
+}
+
+
+  .navbar-nav .nav-link:hover {
+    background-color: lightblue;
+    color: white;
+}
+
+.navbar-nav .nav-link.active {
+    color: green;            /* 文字颜色 */
+    background-color: white;  /* 背景颜色 */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 20px;
+}
+
+.card:hover {
+    background-color: #f8f9fa; /* 改变背景颜色 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* 添加阴影 */
+}
+
+.card{
+  height: 150px;
+  width: 250px;
+}
+
+nav{
+  background-color: #EEEEEE;
+}
