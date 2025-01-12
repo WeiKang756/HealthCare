@@ -45,4 +45,3 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     // Debugging: Output the error message
     echo json_encode(["error" => "Invalid request method."]);
 }
-?>
