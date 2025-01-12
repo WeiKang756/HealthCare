@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php"); // Include Function
+include"../shared/config.php";
+include"../shared/function.php"; // Include Function
 
 // Check if the user is logged in
 if (!isset($_SESSION['position'])) {
@@ -52,7 +52,7 @@ $confirmed = getBloodOrdersByStatusWithFacility($conn, "Confirmed");
 
 <body>
     <?php
-    include("nav.php");
+    include"nav.php";
     ?>
     <main>
         <div class="container">

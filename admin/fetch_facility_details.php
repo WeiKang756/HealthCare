@@ -1,5 +1,5 @@
 <?php
-include("../shared/config.php");
+include"../shared/config.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $facilityId = $_POST['facilityId'];

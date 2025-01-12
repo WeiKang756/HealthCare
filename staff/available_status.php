@@ -8,8 +8,8 @@ if (!isset($_SESSION['staff_ID'])) {
     exit;
 }
 
-include("../shared/config.php"); // Include your database connection configuration
-include("../shared/function.php"); // Include Function
+include"../shared/config.php"; // Include your database connection configuration
+include"../shared/function.php"; // Include Function
 
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($update_stmt->execute()) {
         // The update was successful
             echo "Success";
-        } 
+        }
      else {
         // The update failed
         echo "Error"; // You can customize the response message

@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 
 // Check if the user is logged in
 if (!isset($_SESSION['position'])) {
@@ -99,7 +99,7 @@ $pendingBlood = getBloodByStatus($conn, 'Pending');
   </head>
   <body>
     <?php
-        include("nav.php");
+        include"nav.php";
      ?>
 <style>
   .icon{

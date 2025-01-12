@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php"); // Include Function
+include"../shared/config.php";
+include"../shared/function.php"; // Include Function
 
 $staff_ID = $_SESSION['staff_ID'];
 $facility_ID = $_SESSION['facility_ID'];
@@ -55,7 +55,7 @@ $InProgressAppointmentDetail = getAppointmentsForTodayByStatusAndFacility($facil
 
 <body>
     <?php
-    include("nav.php");
+    include"nav.php";
     ?>
     <main>
         <div class="container">

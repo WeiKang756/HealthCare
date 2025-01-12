@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../shared/config.php");
+include"../shared/config.php";
 
 echo $_SESSION['facility_ID'];
 ?>
@@ -32,7 +32,7 @@ echo $_SESSION['facility_ID'];
 </style>
   <body>
     <?php
-        include("nav.php");
+        include"nav.php";
      ?>
 <main>
   <div class="container">

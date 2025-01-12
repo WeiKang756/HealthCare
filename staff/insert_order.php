@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 // insert_order.php
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 session_start();
 
 $staff_ID = $_SESSION['staff_ID'];

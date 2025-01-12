@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 
 $staff_ID = $_SESSION['staff_ID'];
 $facility_ID = $_SESSION['facility_ID'];
@@ -53,7 +53,7 @@ $order = getOrdersByFacility($facility_ID);
   </head>
   <body>
     <?php
-        include("nav.php");
+        include"nav.php";
      ?>
 <style>
   .icon{

@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");// Include Function
+include"../shared/config.php";
+include"../shared/function.php";// Include Function
 
 $facility_ID = $_SESSION['facility_ID']; // Replace with the actual facility ID
 
@@ -45,7 +45,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 </style>
 <body>
 <?php
-include("nav.php");
+include"nav.php";
 ?>
 <main>
     <div class="container">

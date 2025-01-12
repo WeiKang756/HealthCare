@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 
 $user_ICNumber = $_SESSION['user_id'];
 $sql = "SELECT * FROM users WHERE user_ICNumber = ?";
@@ -98,7 +98,7 @@ $totaldonate = getTotalBloodByUserId($conn, $user_ICNumber)
   <body>
     <?php
       $activePage = 'blood';
-        include("header.php");
+        include"header.php";
      ?>
 <style>
   .icon{

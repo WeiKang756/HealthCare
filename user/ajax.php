@@ -1,6 +1,6 @@
 <?php
 
-include("../shared/config.php");
+include"../shared/config.php";
 
 function generateTimeSlots($startTime, $endTime, $duration) {
     $allSlots = [];
