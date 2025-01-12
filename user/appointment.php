@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../shared/config.php");
+include"../shared/config.php";
 
 ?>
 
@@ -28,7 +28,7 @@ include("../shared/config.php");
   <body>
   <?php
   $activePage = 'appointment';
-  include("header.php"); ?>
+  include"header.php"; ?>
     <main>
 
       <div class="container mt-5">

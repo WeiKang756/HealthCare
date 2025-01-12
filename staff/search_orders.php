@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {

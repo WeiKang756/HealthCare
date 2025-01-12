@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 
 $staff_ID = $_SESSION['staff_ID'];
 $facility_ID = $_SESSION['facility_ID'];
@@ -35,7 +35,7 @@ $InProgressOrders = getMedicalOrdersByStatusAndFacility('In Progress', $facility
 </style>
 <body>
   <?php
-    include("nav.php");
+    include"nav.php";
   ?>
 
   <main>

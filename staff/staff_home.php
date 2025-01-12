@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../shared/config.php");
+include"../shared/config.php";
 
 
 ?>
@@ -30,7 +30,7 @@ include("../shared/config.php");
   </style>
   <body>
     <?php
-        include("nav.php");
+        include"nav.php";
      ?>
 <main>
 

@@ -1,5 +1,5 @@
 <?php
-include("shared/config.php");
+include"shared/config.php";
 
      // Retrieve user_ic and user_email from the form
      $user_ic = $_POST["ic_num"];

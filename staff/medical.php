@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-include("../shared/config.php");
-include("../shared/function.php");
+include"../shared/config.php";
+include"../shared/function.php";
 
 // Check if the user is logged in
 if (!isset($_SESSION['position'])) {
@@ -97,7 +97,7 @@ if ($userPosition != 'Doctor') {
 </head>
 <body>
   <?php
-    include("nav.php");
+    include"nav.php";
   ?>
   <main>
     <div class="container">

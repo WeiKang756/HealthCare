@@ -8,8 +8,8 @@ if (!isset($_SESSION['staff_ID'])) {
     exit;
 }
 
-include("../shared/config.php"); // Include your database connection configuration
-include("../shared/function.php");// Include Function
+include"../shared/config.php"; // Include your database connection configuration
+include"../shared/function.php";// Include Function
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $facility_id = $_SESSION['facility_ID'];

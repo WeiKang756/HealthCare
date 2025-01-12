@@ -2,7 +2,7 @@
 // Start a session for storing user data
 session_start();
 
-include("../shared/config.php"); // Include your database connection configuration
+include"../shared/config.php"; // Include your database connection configuration
 
 $target_dir = "../Images/";
 
