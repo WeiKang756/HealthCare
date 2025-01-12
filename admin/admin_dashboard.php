@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("../shared/config.php");
+include "../shared/config.php";
 
 $username = $_SESSION['admin'];
 $user_role = $_SESSION['role'];
@@ -36,7 +36,7 @@ if ($user_role !== 'admin') {
   </style>
   <body>
     <?php
-        include("nav.php");
+        include "nav.php";
      ?>
 <main>
 
