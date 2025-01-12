@@ -5,43 +5,77 @@ ini_set('display_errors', 1);
 
 use Shared\Config;
 use Shared\Functions;
+
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
-  $user_ICNumber = isset($_GET["user_ICNumber"]) ? $_GET["user_ICNumber"] : '';
+    try {
+        // Get the user IC Number from GET parameters
+        $user_ICNumber = isset($_GET["user_ICNumber"]) ? $_GET["user_ICNumber"] : '';
 
-  // Construct the SELECT query with JOIN
+        // Validate input
+        if (empty($user_ICNumber)) {
+            jsonResponse(["error" => "User IC Number is required"], false);
+            exit;
+        }
 
-  $sql = "SELECT users.*, user_vaccine.*, vaccine.*
-          FROM users
-          LEFT JOIN user_vaccine ON users.user_ICNumber = user_vaccine.user_ICNumber
-          LEFT JOIN vaccine ON user_vaccine.vaccine_ID = vaccine.vaccine_ID
-          WHERE users.user_ICNumber = ?";
+        // Include database connection
+        require_once 'db_connection.php'; // Assume this sets $conn
 
-  $stmt = $conn->prepare($sql);
+        // Fetch user data
+        $orders = fetchUserData($conn, $user_ICNumber);
 
-  if ($stmt) {
-      $stmt->bind_param("s", $user_ICNumber);
-      $stmt->execute();
-      $result = $stmt->get_result();
-      $stmt->close();
-
-      $orders = [];
-
-      // Fetch results and store in an array
-      while ($row = $result->fetch_assoc()) {
-          $orders[] = $row;
-      }
-
-      $conn->close();
-
-      // Output JSON for jQuery to handle on the client side
-      echo json_encode($orders);
-  } else {
-      // Debugging: Output the error message
-      echo json_encode(["error" => "Error in preparing SQL statement: " . $conn->error]);
-  }
+        // Return JSON response
+        jsonResponse($orders);
+    } catch (Exception $e) {
+        // Handle any exceptions and send error response
+        jsonResponse(["error" => $e->getMessage()], false);
+    }
 } else {
-    // Debugging: Output the error message
-    echo json_encode(["error" => "Invalid request method."]);
+    jsonResponse(["error" => "Invalid request method."], false);
 }
+
+/**
+ * Fetch user data based on IC Number.
+ *
+ * @param mysqli $conn
+ * @param string $user_ICNumber
+ * @return array
+ * @throws Exception
+ */
+function fetchUserData($conn, $user_ICNumber) {
+    $sql = "SELECT users.*, user_vaccine.*, vaccine.*
+            FROM users
+            LEFT JOIN user_vaccine ON users.user_ICNumber = user_vaccine.user_ICNumber
+            LEFT JOIN vaccine ON user_vaccine.vaccine_ID = vaccine.vaccine_ID
+            WHERE users.user_ICNumber = ?";
+
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        throw new Exception("SQL error: " . $conn->error);
+    }
+
+    $stmt->bind_param("s", $user_ICNumber);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $stmt->close();
+
+    return $result->fetch_all(MYSQLI_ASSOC);
+}
+
+/**
+ * Send a JSON response.
+ *
+ * @param array $data
+ * @param bool $success
+ * @return void
+ */
+function jsonResponse($data, $success = true) {
+    header('Content-Type: application/json');
+    echo json_encode([
+        "success" => $success,
+        "data" => $data
+    ]);
+    exit;
+}
+?>
