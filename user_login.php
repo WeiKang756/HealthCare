@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("shared/config.php");
+use Shared\Config;
 
 $ic_num = $_POST["ic_num"];
 $login_password = $_POST["login_password"];

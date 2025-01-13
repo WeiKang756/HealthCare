@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../shared/config.php");
-include("../shared/function.php");
+use Shared\Config;
+use Shared\Functions;
 
 
 $user_ICNumber = $_SESSION['user_id'];
@@ -87,7 +87,7 @@ $appointments = getAppointmentsWithFacility($user_ICNumber);
   <body>
   <?php
   $activePage = 'home';
-   include("header.php"); ?>
+   include "header.php"; ?>
     <main>
       <div class="container">
         <div class="row m-0">

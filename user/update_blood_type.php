@@ -6,8 +6,8 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-include("../shared/config.php");
-include("../shared/function.php");
+use Shared\Config;
+use Shared\Functions;
 // update_blood_type.php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
