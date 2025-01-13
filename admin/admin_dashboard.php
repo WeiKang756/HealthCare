@@ -3,6 +3,9 @@ session_start();
 namespace Admin;
 
 use Shared\Config;
+use Shared\Navigation;
+
+Navigation::render();
 
 session_start();
 
@@ -39,7 +42,7 @@ if ($user_role !== 'admin') {
   </style>
   <body>
     <?php
-        include "nav.php";
+    Navigation::render();
      ?>
 <main>
 
