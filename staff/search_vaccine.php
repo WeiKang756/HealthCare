@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         // Return JSON response
         jsonResponse($orders);
-    } catch (Exception $e) {
+    } catch (\Exception $e) {
         // Handle any exceptions and send error response
         jsonResponse(["error" => $e->getMessage()], false);
     }
