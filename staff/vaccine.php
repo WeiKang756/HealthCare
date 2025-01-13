@@ -62,9 +62,9 @@ echo $_SESSION['facility_ID'];
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td>" . $row["vaccine_ID"] . "<TD_CLOSE_TAG>";
-                        echo "<td>" . $row["vaccine_name"] . "<TD_CLOSE_TAG>";
-                        echo "<td>" . $row["total_doses"] . "<TD_CLOSE_TAG>";
+                        echo "<td>" . $row["vaccine_ID"] . TD_CLOSE_TAG;
+                        echo "<td>" . $row["vaccine_name"] . TD_CLOSE_TAG;
+                        echo "<td>" . $row["total_doses"] . TD_CLOSE_TAG;
                         echo "</tr>";
                     }
                 } else {

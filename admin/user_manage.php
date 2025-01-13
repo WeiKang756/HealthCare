@@ -60,8 +60,8 @@ if ($user_role !== 'admin') {
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo '<tr class="custom-table-row">';
-                        echo '<td>' . $row['user_ICNumber'] . '<TD_CLOSE_TAG>';
-                        echo '<td>' . $row['user_name'] . '<TD_CLOSE_TAG>';
+                        echo '<td>' . $row['user_ICNumber'] . TD_CLOSE_TAG;
+                        echo '<td>' . $row['user_name'] . TD_CLOSE_TAG;
                         echo '<td>';
                         echo '<button class="btn btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#ViewUser"
                                 data-user-ic="' . $row['user_ICNumber'] . '"
@@ -71,7 +71,7 @@ if ($user_role !== 'admin') {
                                 data-user-address="' . $row['user_address'] . '">View</button>';
                         echo '<button class="btn btn-danger btn-sm" data-bs-toggle="modal" style="margin-left: 10px;" data-bs-target="#DeleteUser"
                                 data-user-ic="' . $row['user_ICNumber'] . '" data-user-name="' . $row['user_name'] . '">Delete</button>';
-                        echo '<TD_CLOSE_TAG>';
+                        echo TD_CLOSE_TAG;
                     }
                 } else {
                     echo '<tr><td colspan="4">No User found.</td></tr>';

@@ -4,6 +4,8 @@ session_start();
 include"../shared/config.php";
 include"../shared/function.php";
 
+define('TR_CLOSE_TAG', '</tr>')
+
 // Check if the user is logged in
 if (!isset($_SESSION['position'])) {
     // Redirect to the login page or show an error message
@@ -308,7 +310,7 @@ $pendingBlood = getBloodByStatus($conn, 'Pending');
                         echo "<td>$bloodType</td>";
                         echo "<td>$status</td>";
                         echo "<td>$count</td>";
-                        echo '</tr>';
+                        echo TR_CLOSE_TAG;
                     }
                 }
 
@@ -336,7 +338,7 @@ $pendingBlood = getBloodByStatus($conn, 'Pending');
                 if (empty($pendingBlood)) {
                     echo '<tr>';
                     echo "<td colspan='5'>No Pending Blood</td>";
-                    echo '</tr>';
+                    echo TR_CLOSE_TAG;
                 } else {
                     foreach ($pendingBlood as $pending) {
                         echo '<tr>';
@@ -347,7 +349,7 @@ $pendingBlood = getBloodByStatus($conn, 'Pending');
                         echo '<td><button class="btn btn-success ms-1" onclick="available(\'' . $pending['blood_ID'] . '\')">Available</button>
                         <button class="btn btn-danger ms-1" onclick="reject(\'' . $pending['blood_ID'] . '\')">Reject</button>
                         </td>';
-                        echo '</tr>';
+                        echo TR_CLOSE_TAG;
                     }
                 }
                 echo '</table>';

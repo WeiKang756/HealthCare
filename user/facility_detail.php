@@ -92,10 +92,10 @@ include "header.php";
 
                   while ($row = mysqli_fetch_assoc($result_operation)) {
                       echo '<tr>';
-                      echo '<td>' . $row['DayOfWeek'] . '<TD_CLOSE_TAG>';
-                      echo '<td>' . $row['OpeningTime'] . '<TD_CLOSE_TAG>';
-                      echo '<td>' . $row['ClosingTime'] . '<TD_CLOSE_TAG>';
-                      echo '<td>' . $row['Status'] . '<TD_CLOSE_TAG>';
+                      echo '<td>' . $row['DayOfWeek'] . TD_CLOSE_TAG;
+                      echo '<td>' . $row['OpeningTime'] . TD_CLOSE_TAG;
+                      echo '<td>' . $row['ClosingTime'] . TD_CLOSE_TAG;
+                      echo '<td>' . $row['Status'] . TD_CLOSE_TAG;
                       echo '</tr>';
                   }
                   ?>

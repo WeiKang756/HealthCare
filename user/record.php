@@ -3,7 +3,7 @@ session_start();
 use Shared\Config;
 use Shared\Functions;
 
-
+define('TR_CLOSE_TAG', '</tr>');
 $user_ICNumber = $_SESSION['user_id'];
 
 
@@ -66,7 +66,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                         if (empty($appointments)) {
                           echo '<tr>';
                           echo "<td>No Upcoming Appointment</td>";
-                          echo '</tr>';
+                          echo TR_CLOSE_TAG;
                         }
                         else {
                           foreach ($appointments as $appointment) {
@@ -79,7 +79,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                               echo "<td>{$appointment['Status']}</td>";
                               echo '<td><button class="btn btn-danger btn-sm" style="margin-left: 8px;" data-bs-toggle="modal" data-bs-target="#Cancel"
                                     data-cancel-button="' . $appointment['AppointmentID'] . '">Delete</button></td>';
-                              echo '</tr>';
+                              echo TR_CLOSE_TAG;
                           }
                         }
                         echo '</table>';
@@ -109,7 +109,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                         if (empty($appointments)) {
                           echo '<tr>';
                           echo "<td>No Appointment</td>";
-                          echo '</tr>';
+                          echo TR_CLOSE_TAG;
                         }
                         else {
                           foreach ($pastAppointment as $appointment) {
@@ -120,7 +120,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                               echo "<td>{$appointment['TimeSlot']}</td>";
                               echo "<td>{$appointment['Service']}</td>";
                               echo "<td>{$appointment['Status']}</td>";
-                              echo '</tr>';
+                              echo TR_CLOSE_TAG;
 
                           }
                         }
@@ -155,7 +155,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                             if (empty($MedicalOrders)) {
                                 echo '<tr>';
                                 echo "<td>No Medical History</td>";
-                                echo '</tr>';
+                                echo TR_CLOSE_TAG;
                             } else {
                                 foreach ($MedicalOrders as $medicalItem) {
                                     echo '<tr>';
@@ -164,7 +164,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
                                     echo "<td>{$medicalItem['order_date']}</td>";
                                     echo "<td>{$medicalItem['facility_Name']}</td>";
                                     echo "<td><button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#MedicalModal{$medicalItem['order_id']}'>View Details</button><td>";
-                                    echo '</tr>';
+                                    echo TR_CLOSE_TAG;
                                 }
                             }
                             echo '</table>';

@@ -76,11 +76,11 @@ if ($result->num_rows > 0) {
 
             while ($row = $staff_result->fetch_assoc()) {
                 echo '<tr>';
-                echo '<td>' . $row['staff_ID'] . '<TD_CLOSE_TAG>';
-                echo '<td>' . $row['staff_name'] . '<TD_CLOSE_TAG>';
-                echo '<td>' . $row['staff_position'] . '<TD_CLOSE_TAG>';
-                echo '<td>' . $row['staff_contact'] . '<TD_CLOSE_TAG>';
-                echo '<td>' . $row['facility_ID'] . '<TD_CLOSE_TAG>';
+                echo '<td>' . $row['staff_ID'] . TD_CLOSE_TAG;
+                echo '<td>' . $row['staff_name'] . TD_CLOSE_TAG;
+                echo '<td>' . $row['staff_position'] . TD_CLOSE_TAG;
+                echo '<td>' . $row['staff_contact'] . TD_CLOSE_TAG;
+                echo '<td>' . $row['facility_ID'] . TD_CLOSE_TAG;
                 echo '<td>';
                 echo '<button class="btn btn-primary btn-sm mr-5" data-bs-toggle="modal" data-bs-target="#EditStaff"
                         data-staff-id="' . $row['staff_ID'] . '"
@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
                         data-facility-ID="' . $row['facility_ID'] . '">Edit</button>';
                 echo '<button class="btn btn-danger btn-sm" style="margin-left: 8px;" data-bs-toggle="modal" data-bs-target="#DeleteStaff"
                         data-staff-id="' . $row['staff_ID'] . '" data-staff-name="' . $row['staff_name'] . '">Delete</button>';
-                echo '<TD_CLOSE_TAG>';
+                        echo TD_CLOSE_TAG;
                 echo '</tr>';
             }
 
