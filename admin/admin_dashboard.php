@@ -1,7 +1,10 @@
 <?php
 session_start();
+namespace Admin;
 
-include "../shared/config.php";
+use Shared\Config;
+
+session_start();
 
 $username = $_SESSION['admin'];
 $user_role = $_SESSION['role'];
