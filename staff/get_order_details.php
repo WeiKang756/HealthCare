@@ -26,4 +26,3 @@ if (isset($_GET['order_id'])) {
     // Missing order_id parameter
     echo json_encode(['error' => 'Missing order_id parameter']);
 }
-?>

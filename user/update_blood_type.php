@@ -33,4 +33,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error updating blood type: " . mysqli_error($conn);
     }
 }
-?>

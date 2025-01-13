@@ -99,4 +99,3 @@ if (isset($_FILES['profilePicture'])) {
 }
 
 mysqli_close($conn);
-?>

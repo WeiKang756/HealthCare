@@ -160,6 +160,3 @@ if (isset($_GET['action']) && $_GET['action'] === 'loadTimeSlots') {
 
     echo json_encode($response);
 }
-
-
-?>

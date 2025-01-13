@@ -36,4 +36,3 @@ mysqli_stmt_bind_param($stmt, "ssss", $facility_Name, $facility_contact, $facili
   }
 
 mysqli_stmt_close($stmt);
-?>

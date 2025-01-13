@@ -62,4 +62,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If the request method is not POST, handle it accordingly
     echo "Invalid request method";
 }
-?>

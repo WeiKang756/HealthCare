@@ -31,4 +31,4 @@ if ($login_row && password_verify($login_password, $login_row['user_password']))
 }
 
 mysqli_stmt_close($login_stmt);
- ?>
+ 

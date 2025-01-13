@@ -80,4 +80,3 @@ function jsonResponse($data, $success = true) {
     ]);
     exit;
 }
-?>

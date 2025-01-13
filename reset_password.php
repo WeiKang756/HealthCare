@@ -29,4 +29,4 @@ use Shared\Config;
      // Close the database connection
      $conn->close();
 
- ?>
+ 
