@@ -6,8 +6,8 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-include("../shared/config.php");
-include("../shared/function.php");
+include "../shared/config.php";
+include "../shared/function.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve user details from the form

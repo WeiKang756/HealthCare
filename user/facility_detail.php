@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-include("../shared/config.php");
-include("../shared/function.php");
+use Shared\Config;
+use Shared\Functions;
 // Get the facilityID value from the URL
 $facilityID = $_GET['facilityID'];
 $query = "SELECT * FROM facilities WHERE facility_ID = ?";
@@ -36,7 +36,7 @@ $facility_logo = $facilityInfo['facility_logo'];
 <body>
 <?php
   $activePage = 'facility';
-include("header.php");
+include "header.php";
 ?>
 <main>
   <div class="container">

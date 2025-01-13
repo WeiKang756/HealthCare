@@ -1,7 +1,7 @@
 <?php
 session_start();
-include("../shared/config.php");
-include("../shared/function.php");
+use Shared\Config;
+use Shared\Functions;
 
 
 $user_ICNumber = $_SESSION['user_id'];
@@ -37,7 +37,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
   <body>
   <?php
   $activePage = 'record';
-  include("header.php"); ?>
+  include "header.php"; ?>
     <main>
       <div class="container">
         <div class="row">

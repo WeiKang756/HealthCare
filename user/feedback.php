@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("../shared/config.php");
+include "../shared/config.php";
 
 ?>
 
@@ -19,7 +19,7 @@ include("../shared/config.php");
     <title>My Study KPI</title>
   </head>
   <body>
-  <?php include("header.php"); ?>
+  <?php include "header.php"; ?>
     <main>
 
       <table id="timeTable">
