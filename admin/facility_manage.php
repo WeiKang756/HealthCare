@@ -1,7 +1,9 @@
 <?php
 session_start();
+namespace Admin;
 
 use Shared\Config;
+use Shared\Navigation;
 
 $username = $_SESSION['admin'];
 $user_role = $_SESSION['role'];
@@ -28,7 +30,7 @@ if ($user_role !== 'admin') {
     <link rel="stylesheet" href="css/style.css">
   </head>
     <?php
-        include"nav.php"
+        Navigation::render();
      ?>
 <main>
   <div class="container">

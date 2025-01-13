@@ -1,7 +1,8 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
+use Shared\Config;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_ICNumber = $_POST['user_ICNumber'];

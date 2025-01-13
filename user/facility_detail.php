@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+namespace User;
+
 use Shared\Config;
 use Shared\Functions;
 
@@ -39,7 +41,7 @@ $facility_logo = $facilityInfo['facility_logo'];
 <body>
 <?php
   $activePage = 'facility';
-include "header.php";
+use User\Header; 
 ?>
 <main>
   <div class="container">

@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
+use Shared\Navigation;
 
 
 ?>
@@ -30,7 +33,7 @@ include"../shared/config.php";
   </style>
   <body>
     <?php
-        include"nav.php";
+        Navigation::render();
      ?>
 <main>
 

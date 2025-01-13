@@ -1,9 +1,9 @@
 <?php
 // Start a session for storing user data
 session_start();
+namespace Staff;
 
-include"../shared/config.php"; // Include your database connection configuration
-
+use Shared\Config;
 $target_dir = "../Images/";
 
 // Check if 'uploads/' directory exists, if not create it

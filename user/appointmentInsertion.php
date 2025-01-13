@@ -1,6 +1,8 @@
 <?php
 session_start();
-include"../shared/config.php";
+namespace User;
+
+use Shared\Config;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $service = $_POST['service']; // Check if the form has been submitted

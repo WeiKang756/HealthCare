@@ -1,7 +1,9 @@
 <?php
 session_start();
-include"../shared/config.php";
+namespace User;
 
+use Shared\Config;
+use Shared\Navigation;
 ?>
 
 
@@ -28,7 +30,7 @@ include"../shared/config.php";
   <body>
   <?php
   $activePage = 'appointment';
-  include"header.php"; ?>
+  Navigation::render(); ?>
     <main>
 
       <div class="container mt-5">

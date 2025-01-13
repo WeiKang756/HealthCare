@@ -7,8 +7,9 @@ if (!isset($_SESSION['staff_ID'])) {
     header("Location: index.php"); // Change "login.php" to your actual login page
     exit;
 }
+namespace Staff;
 
-include"../shared/config.php"; // Include your database connection configuration
+use Shared\Config;
 include"../shared/function.php";// Include Function
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

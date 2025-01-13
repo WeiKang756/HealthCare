@@ -8,8 +8,10 @@ if (!isset($_SESSION['staff_ID'])) {
     exit;
 }
 
-include"../shared/config.php"; // Include your database connection configuration
-include"../shared/function.php"; // Include Function
+namespace Staff;
+
+use Shared\Config;
+use Shared\Functions;
 
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

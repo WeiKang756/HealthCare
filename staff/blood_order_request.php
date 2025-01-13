@@ -1,8 +1,10 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
-include"../shared/function.php";
+use Shared\Config;
+use Shared\Navigation;
+use Shared\Functions;
 
 $staff_ID = $_SESSION['staff_ID'];
 $facility_ID = $_SESSION['facility_ID'];
@@ -53,7 +55,7 @@ $order = getOrdersByFacility($facility_ID);
   </head>
   <body>
     <?php
-        include"nav.php";
+          Navigation::render();
      ?>
 <style>
   .icon{

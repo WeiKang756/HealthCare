@@ -53,13 +53,15 @@
 <body>
 <?php
   $activePage = 'facility';
-include "header.php"; ?>
+use User\Header; ?>
 <main>
     <div class="container">
         <div class="row m-4">
             <?php
             // Assuming you have a database connection established
-            include "../shared/config.php";
+            namespace User;
+
+            use Shared\Config;
 
             // Fetch facility information from the database
             $query = "SELECT * FROM facilities";

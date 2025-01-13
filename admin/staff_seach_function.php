@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace Admin;
+
+use Shared\Config;
+use Shared\Navigation;
 
 $username = $_SESSION['admin'];
 $user_role = $_SESSION['role'];
@@ -39,7 +42,9 @@ if (isset($_GET['search'])) {
 </head>
 <body>
 
-<?php include"nav.php"; ?>
+<?php
+Navigation::render();
+?>
 
 <main>
     <div class="container mt-3">
@@ -117,7 +122,7 @@ if (isset($_GET['search'])) {
 </head>
 <body>
 
-<?php include"nav.php"; ?>
+<?php Navigation::render(); ?>
 
 <main>
     <div class="container">

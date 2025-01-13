@@ -87,7 +87,7 @@ $appointments = getAppointmentsWithFacility($user_ICNumber);
   <body>
   <?php
   $activePage = 'home';
-   include "header.php"; ?>
+   use User\Header; ?>
     <main>
       <div class="container">
         <div class="row m-0">

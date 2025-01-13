@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-include "../shared/config.php";
+namespace Admin;
+
+use Shared\Config;
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   $admin_username = $_POST['admin_username'];

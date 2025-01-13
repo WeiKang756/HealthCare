@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace User;
+
+use Shared\Config;
+use Shared\Navigation;
 include"../shared/function.php";
 
 $user_ICNumber = $_SESSION['user_id'];
@@ -98,7 +101,7 @@ $totaldonate = getTotalBloodByUserId($conn, $user_ICNumber)
   <body>
     <?php
       $activePage = 'blood';
-        include"header.php";
+        Navigation::render();
      ?>
 <style>
   .icon{

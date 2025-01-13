@@ -1,6 +1,7 @@
 <?php
-// Include your database connection configuration
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

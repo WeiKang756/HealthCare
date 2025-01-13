@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
+use Shared\Navigation;
 
 define('TD_CLOSE_TAG', '</td>');
 
@@ -34,7 +37,7 @@ echo $_SESSION['facility_ID'];
 </style>
   <body>
     <?php
-        include"nav.php";
+        Navigation::render();
      ?>
 <main>
   <div class="container">

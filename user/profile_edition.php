@@ -6,8 +6,10 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-include "../shared/config.php";
-include "../shared/function.php";
+namespace User;
+
+use Shared\Config;
+use Shared\Functions;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve user details from the form

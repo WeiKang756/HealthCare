@@ -2,9 +2,10 @@
 // search_orders.php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-// insert_order.php
-include"../shared/config.php";
-include"../shared/function.php";
+namespace Staff;
+
+use Shared\Config;
+use Shared\Functions;
 session_start();
 
 $staff_ID = $_SESSION['staff_ID'];

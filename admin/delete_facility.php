@@ -1,5 +1,7 @@
 <?php
-include"../shared/config.php";
+namespace Admin;
+
+use Shared\Config;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $facilityId = $_POST['facilityId'];

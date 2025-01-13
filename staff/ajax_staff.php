@@ -1,6 +1,8 @@
 <?php
 session_start();
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
 
 
 // Simulate fetching facilities based on the selected service

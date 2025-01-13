@@ -1,7 +1,9 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
+use Shared\Config;
+use Shared\Navigation;
 include"../shared/function.php";
 
 $staff_ID = $_SESSION['staff_ID'];
@@ -35,7 +37,7 @@ $InProgressOrders = getMedicalOrdersByStatusAndFacility('In Progress', $facility
 </style>
 <body>
   <?php
-    include"nav.php";
+    Navigation::render();
   ?>
 
   <main>

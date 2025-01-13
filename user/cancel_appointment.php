@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-include "../shared/config.php"; // Include your database connection configuration
+namespace User;
+
+use Shared\Config;
 
 // Assuming you receive the appointment ID through a POST request
 if (isset($_POST['appointmentID'])) {

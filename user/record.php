@@ -37,7 +37,7 @@ $MedicalOrders = getMedicalOrdersByICNumber($conn, $user_ICNumber)
   <body>
   <?php
   $activePage = 'record';
-  include "header.php"; ?>
+  use User\Header; ?>
     <main>
       <div class="container">
         <div class="row">

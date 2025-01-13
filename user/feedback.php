@@ -1,6 +1,8 @@
 <?php
 session_start();
-include "../shared/config.php";
+namespace User;
+
+use Shared\Config;
 
 ?>
 
@@ -19,7 +21,7 @@ include "../shared/config.php";
     <title>My Study KPI</title>
   </head>
   <body>
-  <?php include "header.php"; ?>
+  <?php use User\Header; ?>
     <main>
 
       <table id="timeTable">

@@ -6,8 +6,10 @@ if (!isset($_SESSION['staff_ID'])) {
     exit;
 }
 
-include"../shared/config.php";
-include"../shared/function.php";
+namespace Staff;
+
+use Shared\Config;
+use Shared\Functions;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $facility_ID = $_SESSION['facility_ID'];

@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
   $staff_ID = $_POST['staff_ID'];

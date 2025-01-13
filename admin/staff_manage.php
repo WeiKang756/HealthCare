@@ -1,7 +1,9 @@
 <?php
 session_start();
+namespace Admin;
 
-use Shared\Config;;
+use Shared\Config;
+use Shared\Navigation;
 
 define('TD_END_TAG', '</td>');
 
@@ -39,7 +41,7 @@ if ($result->num_rows > 0) {
   </head>
 <body>
     <?php
-        include"nav.php";
+        Navigation::render();
      ?>
 <main>
   <div class="container">

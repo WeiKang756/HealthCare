@@ -1,6 +1,8 @@
 <?php
 session_start();
-include"../shared/config.php";
+namespace Staff;
+
+use Shared\Config;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vaccine_name = $_POST['vaccine_name'];

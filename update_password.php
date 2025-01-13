@@ -1,5 +1,7 @@
 <?php
-include"shared/config.php";
+namespace Admin;
+
+use Shared\Config;
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

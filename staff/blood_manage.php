@@ -1,8 +1,10 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
-include"../shared/function.php";
+use Shared\Config;
+use Shared\Navigation;
+use Shared\Functions;
 
 define('TR_CLOSE_TAG', '</tr>')
 
@@ -101,7 +103,7 @@ $pendingBlood = getBloodByStatus($conn, 'Pending');
   </head>
   <body>
     <?php
-        include"nav.php";
+        Navigation::render();
      ?>
 <style>
   .icon{

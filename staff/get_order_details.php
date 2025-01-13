@@ -1,6 +1,7 @@
 <?php
+namespace Staff;
 
-include"../shared/config.php";
+use Shared\Config;
 
 // Check if order_id is set in the URL
 if (isset($_GET['order_id'])) {

@@ -1,5 +1,7 @@
 <?php
-include"shared/config.php";
+namespace Admin;
+
+use Shared\Config;
 
      // Retrieve user_ic and user_email from the form
      $user_ic = $_POST["ic_num"];

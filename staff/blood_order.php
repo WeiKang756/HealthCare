@@ -1,8 +1,10 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
-include"../shared/function.php"; // Include Function
+use Shared\Config;
+use Shared\Navigation;
+use Shared\Functions;
 
 // Check if the user is logged in
 if (!isset($_SESSION['position'])) {
@@ -52,7 +54,7 @@ $confirmed = getBloodOrdersByStatusWithFacility($conn, "Confirmed");
 
 <body>
     <?php
-    include"nav.php";
+    Navigation::render();
     ?>
     <main>
         <div class="container">

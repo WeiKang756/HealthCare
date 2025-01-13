@@ -1,7 +1,10 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+namespace Admin;
+
+use Shared\Config;
+use Shared\Navigation;
 
 define('TD_CLOSE_TAG', '</td>');
 
@@ -37,7 +40,7 @@ if ($user_role !== 'admin') {
 
   </style>
     <?php
-        include"nav.php";
+        Navigation::render();
      ?>
 <main>
   <div class="container-fluid">

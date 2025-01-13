@@ -1,8 +1,10 @@
 <?php
 session_start();
+namespace Staff;
 
-include"../shared/config.php";
-include"../shared/function.php";// Include Function
+use Shared\Config;
+use Shared\Navigation;
+use Shared\Functions;
 
 $facility_ID = $_SESSION['facility_ID']; // Replace with the actual facility ID
 
@@ -45,7 +47,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 </style>
 <body>
 <?php
-include"nav.php";
+Navigation::render();
 ?>
 <main>
     <div class="container">

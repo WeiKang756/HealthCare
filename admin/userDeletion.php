@@ -1,6 +1,8 @@
 <?php
 session_start();
-include"../shared/config.php";
+namespace Admin;
+
+use Shared\Config;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_ic = $_POST['user_ic']; // Get the IC number of the user to be deleted
