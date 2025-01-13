@@ -3,8 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include"../shared/config.php";
-include"../shared/function.php";
+use Shared\Config;
+use Shared\Functions;
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
@@ -45,4 +45,3 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     // Debugging: Output the error message
     echo json_encode(["error" => "Invalid request method."]);
 }
-?>
