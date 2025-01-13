@@ -53,13 +53,13 @@
 <body>
 <?php
   $activePage = 'facility';
-include("header.php"); ?>
+include "header.php"; ?>
 <main>
     <div class="container">
         <div class="row m-4">
             <?php
             // Assuming you have a database connection established
-            include("../shared/config.php");
+            include "../shared/config.php";
 
             // Fetch facility information from the database
             $query = "SELECT * FROM facilities";
