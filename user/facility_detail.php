@@ -3,6 +3,9 @@
 session_start();
 use Shared\Config;
 use Shared\Functions;
+
+define('TD_CLOSE_TAG', '</td>');
+
 // Get the facilityID value from the URL
 $facilityID = $_GET['facilityID'];
 $query = "SELECT * FROM facilities WHERE facility_ID = ?";
@@ -89,10 +92,10 @@ include "header.php";
 
                   while ($row = mysqli_fetch_assoc($result_operation)) {
                       echo '<tr>';
-                      echo '<td>' . $row['DayOfWeek'] . '</td>';
-                      echo '<td>' . $row['OpeningTime'] . '</td>';
-                      echo '<td>' . $row['ClosingTime'] . '</td>';
-                      echo '<td>' . $row['Status'] . '</td>';
+                      echo '<td>' . $row['DayOfWeek'] . '<TD_CLOSE_TAG>';
+                      echo '<td>' . $row['OpeningTime'] . '<TD_CLOSE_TAG>';
+                      echo '<td>' . $row['ClosingTime'] . '<TD_CLOSE_TAG>';
+                      echo '<td>' . $row['Status'] . '<TD_CLOSE_TAG>';
                       echo '</tr>';
                   }
                   ?>
