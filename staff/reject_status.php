@@ -37,4 +37,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Invalid request method"; // You can customize the response message
     exit;
 }
-?>

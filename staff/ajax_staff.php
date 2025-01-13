@@ -58,7 +58,3 @@ if (isset($_GET['action']) && $_GET['action'] === 'fetchUserVaccineRecords') {
     // If the request method is not POST, handle it accordingly
     echo json_encode(["error" => "Invalid request"]);
 }
-
-
-
-?>

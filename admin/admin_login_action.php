@@ -32,4 +32,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       echo '<script>alert("User not found"); window.location.href = "login_admin.php";</script>';
   }
 }
-?>

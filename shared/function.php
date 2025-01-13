@@ -494,7 +494,3 @@ function getBloodOrdersByStatusWithFacility($conn, $status)
         return array(); // Return an empty array if there's an error
     }
 }
-
-
-
-?>

@@ -63,5 +63,3 @@ function isTimeSlotAvailable($date, $facilityID, $timeSlot) {
     // If count is 0, the time slot is available; otherwise, it's already booked
     return ($row['count'] == 0);
 }
-
- ?>
