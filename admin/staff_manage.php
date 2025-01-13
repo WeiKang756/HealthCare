@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include"../shared/config.php";
+use Shared\Config;;
 
 define('TD_CLOSE_TAG', '</td>');
 
